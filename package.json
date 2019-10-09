@@ -1,0 +1,53 @@
+{
+  "name": "worlds2019",
+  "version": "1.0.0",
+  "description": "worlds2019 selling website",
+  "main": "index.html",
+  "keywords": [],
+  "license": "MIT",
+  "repository": {},
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/runtime": "^7.1.5",
+    "@types/jest": "^23.3.10",
+    "@types/jquery": "^3.3.31",
+    "babel-loader": "^8.0.4",
+    "chokidar": "^2.0.4",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "jest": "^23.6.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.10.0",
+    "postcss-custom-properties": "^8.0.10",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "stylelint-config-prettier": "^3.0.4",
+    "stylelint-config-shopify": "^5.0.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "parallax-js": "^3.1.0",
+    "babel-jest": "^23.6.0",
+    "babel-runtime": "^6.26.0",
+    "gsap": "^2.0.2",
+    "imports-loader": "^0.8.0",
+    "jquery": "^3.4.1",
+    "normalize.css": "^7.0.0"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "scripts": {
+    "build-prod": "cross-env NODE_ENV=production webpack --config webpack.conf.js --watch --progress",
+    "build-dev": "cross-env NODE_ENV=development webpack --config webpack.conf.js --watch --progress",
+    "compile-ts": "tsc -w  -p .",
+    "twatch": "theme watch --env=additional --dir=theme --config=theme/config.yml",
+    "test": "tsc -p . && jest --runInBand --forceExit"
+  }
+}

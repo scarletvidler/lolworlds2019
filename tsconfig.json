@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports" : true,
+      "outDir": "./dist/",
+      "target": "es6",
+      "module": "commonjs",
+      "typeRoots": ["./node_modules/@types", "./typings"]
+  }
+}
