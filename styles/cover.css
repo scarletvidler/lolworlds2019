@@ -2,6 +2,17 @@
  * Globals
  */
 
+ .volumesvg{
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: 30px;
+ }
+
+ .volumesvg.off{
+  opacity: 0.5;
+ }
+
 /* Links */
 a,
 a:focus,
@@ -23,8 +34,6 @@ a:hover {
 /*
  * Base structure
  */
-
-
 
 html,
 body {
@@ -113,6 +122,9 @@ h1, p.lead{
 
 
 @media (max-width:786px){
+  body{
+    box-shadow:initial;
+  }
   .cover img{
     max-width: 280px;
   }
@@ -121,6 +133,11 @@ h1, p.lead{
   }
 }
 
+@media (max-width:480px){
+  .cover img{
+    max-width: 100%;
+  }
+}
 
 /*
  * Cover
@@ -139,4 +156,48 @@ h1, p.lead{
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+
+/*
+ * Popup
+ */
+ .popup{
+  position:absolute;
+  background-color:#0000004d;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  cursor:pointer;
+  transition: all 1s;
+  margin-right: 0%;
+}
+.popup.full__width{
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+
+.popup .close__button{
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  right: 10%;
+  top: 5%;
+  position: absolute;
+}
+
+.popup .youtube{
+    width:80%;
+    height:80%;
+}
+
+.popup .youtube iframe{
+    width:100%;
+    height:100%;
+}
+
+.popup.hide{
+  margin-right: 100%;
 }

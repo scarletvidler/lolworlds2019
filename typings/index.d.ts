@@ -43,5 +43,8 @@ declare global {
     product: any;
     upsellProducts: any;
     Shopify: any;
+    player: any;
+    onYouTubePlayerAPIReady: any;
+    YT: any;
   }
 }

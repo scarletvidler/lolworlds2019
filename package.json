@@ -18,6 +18,7 @@
     "chokidar": "^2.0.4",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
+    "gulp": "^4.0.2",
     "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.10.0",
@@ -47,7 +48,7 @@
     "build-prod": "cross-env NODE_ENV=production webpack --config webpack.conf.js --watch --progress",
     "build-dev": "cross-env NODE_ENV=development webpack --config webpack.conf.js --watch --progress",
     "compile-ts": "tsc -w  -p .",
-    "twatch": "theme watch --env=additional --dir=theme --config=theme/config.yml",
-    "test": "tsc -p . && jest --runInBand --forceExit"
+    "test": "tsc -p . && jest --runInBand --forceExit",
+    "gulp": "npm run gulpfile.js"
   }
 }
