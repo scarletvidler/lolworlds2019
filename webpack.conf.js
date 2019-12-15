@@ -8,7 +8,7 @@ module.exports = {
       'app.index': './typescript/index.ts',
     },
   output: {
-    path: path.resolve(__dirname, 'scripts'),
+    path: path.resolve(__dirname, 'src/scripts'),
     filename: '[name].js',
     library: 'app_[name]',
     libraryTarget: 'window'
