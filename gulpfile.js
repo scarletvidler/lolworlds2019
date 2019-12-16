@@ -7,7 +7,7 @@ gulp.task('include', async function() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest('./html'));
+    .pipe(gulp.dest('./dist'));
 });
 
 exports.default = async function() {
@@ -16,5 +16,5 @@ exports.default = async function() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest('./html'));
+    .pipe(gulp.dest('./dist/html'));
 }

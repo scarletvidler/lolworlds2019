@@ -5,10 +5,11 @@ module.exports = {
   watchOptions: { poll: 8000 },
   mode: 'development',
   entry: {
-      'app.index': './typescript/index.ts',
+      'app': path.resolve(__dirname, 'src') + '/typescript/index.ts',
+      'theme': path.resolve(__dirname, 'src') +  '/styles/theme.scss'
     },
   output: {
-    path: path.resolve(__dirname, 'src/scripts'),
+    path: path.resolve(__dirname, 'dist') + '/assets',
     filename: '[name].js',
     library: 'app_[name]',
     libraryTarget: 'window'
@@ -44,6 +45,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [ '.tsx', '.ts','.scss','.js' ]
   },
 };
